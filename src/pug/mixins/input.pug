@@ -1,0 +1,14 @@
+mixin input-block(obj)
+    if obj.type == 'textarea'
+        div.input-group
+            label.input-label(for=obj.id)= obj.label
+            textarea.input-item(type=obj.type placeholder= obj.placeholder id=obj.id)
+    else if(obj.type=='tel')
+        div.input-group
+            label.input-label(for=obj.id)= obj.label
+            div.pone-group
+                input.tel-item(type=obj.type placeholder= obj.placeholder id=obj.id)
+    else
+        div.input-group
+            label.input-label(for=obj.id)= obj.label
+            input.input-item(type=obj.type placeholder= obj.placeholder id=obj.id)
